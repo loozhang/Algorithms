@@ -2,9 +2,6 @@ package com.namaste.string;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.namaste.sort.HeapSort;
-
 import java.util.Arrays;
 
 public class Dereplication {

@@ -6,10 +6,10 @@ public class ShellSort {
 	public static void main(String[] args) 
 	{
 		int[] arr=new int[] {3,2,1,7,8,5,3};
-		ShellSort(arr,arr.length);
+		shellSort(arr,arr.length);
 	}
 	
-    public static void ShellSort(int[] arr,int length) {
+    public static void shellSort(int[] arr,int length) {
     	int temp;
     	int incre=length;
     	while(true) {

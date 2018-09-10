@@ -6,10 +6,10 @@ public class SelectSort {
 	public static void main(String[] args) 
 	{
 		int[] arr=new int[] {3,2,1,7,8,5,3};
-		SelectSort(arr);
+		selectSort(arr);
 	}
 	
-	public static void SelectSort(int[] arr)
+	public static void selectSort(int[] arr)
 	{
 		int temp;
 		for(int i=0;i<arr.length-1;i++)

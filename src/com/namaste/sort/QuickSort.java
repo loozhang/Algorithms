@@ -6,11 +6,11 @@ public class QuickSort {
 	public static void main(String[] args) 
 	{
 		int[] arr=new int[] {3,2,1,7,8,5,3};
-		Common.Print(QuickSort(arr,0,arr.length-1));
+		Common.Print(quickSort(arr,0,arr.length-1));
 		
 	}
 	
-	public static int[] QuickSort(int[] arr,int l,int r) {
+	public static int[] quickSort(int[] arr,int l,int r) {
 		if(l>=r) {
 		}
 		else {
@@ -26,8 +26,8 @@ public class QuickSort {
 					arr[j--]=arr[i];
 			}
 			arr[i]=key;
-			QuickSort(arr,l,i-1);
-			QuickSort(arr,i+1,r);
+			quickSort(arr,l,i-1);
+			quickSort(arr,i+1,r);
 		}
 		
 		return arr;

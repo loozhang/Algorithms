@@ -6,10 +6,10 @@ public class InsertSort {
 	public static void main(String[] args) 
 	{
 		int[] arr=new int[] {3,2,1,7,8,5,3};
-		InsertSort(arr);
+		insertSort(arr);
 	}
 	
-	public static void InsertSort(int[] arr)
+	public static void insertSort(int[] arr)
 	{
 		int temp;
 		for(int i=0;i<arr.length-1;i++)
