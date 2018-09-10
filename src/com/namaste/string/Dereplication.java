@@ -5,14 +5,12 @@ import java.util.List;
 import java.util.Arrays;
 
 public class Dereplication {
-	public static void Process() {
-		String[] array = {"a","b","c","c","d","e","e","e","a"};
+	public static void dereplication(String[] array) {
 		List<String> result = new ArrayList<>();
-		boolean flag;
 		for(int i=0;i<array.length;i++){
-			flag = false;
+			boolean flag = false;
 			for(int j=0;j<result.size();j++){
-				if(array[i].equals(result.get(j))){
+				if(array[i]==result.get(j)){
 					flag = true;
 					break;
 				}
@@ -27,6 +25,7 @@ public class Dereplication {
 	}
 
     public static void main(String[] args) {
-    	Process();
+		String[] array = {"b","b","c","c","d","e","e","e","a"};
+		dereplication(array);
     }
 }
