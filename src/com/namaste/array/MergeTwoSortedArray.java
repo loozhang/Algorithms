@@ -1,6 +1,6 @@
 package com.namaste.array;
 
-import com.namaste.common.Common;;
+import com.namaste.common.Common;
 
 public class MergeTwoSortedArray {
 	
