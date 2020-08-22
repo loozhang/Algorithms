@@ -1,5 +1,7 @@
 package com.namaste.common;
 
+import java.util.*;
+
 public class Common {
 	public static void Print(int[] arr)
 	{
@@ -7,5 +9,13 @@ public class Common {
 		{
 			System.out.println(arr[i]+",");
 		}
+	}
+
+	public static void MapToString(Map<Character,Integer> map){
+		StringBuilder s=new StringBuilder();
+		for (Character c: map.keySet()){
+			s.append(c);
+		}
+		System.out.print(s.toString());
 	}
 }

@@ -42,7 +42,7 @@ public class HeapSort {
  
             // 筛选 R[0] 结点，得到i-1个结点的堆
             HeapAdjust(list, 0, i);
-            System.out.format("第 %d 趟: \t", list.length - i);
+            System.out.format("第 %d 趟: t", list.length - i);
             printPart(list, 0, list.length - 1);
         }
     }
@@ -50,10 +50,10 @@ public class HeapSort {
     // 打印序列
     public void printPart(int[] list, int begin, int end) {
         for (int i = 0; i < begin; i++) {
-            System.out.print("\t");
+            System.out.print("t");
         }
         for (int i = begin; i <= end; i++) {
-            System.out.print(list[i] + "\t");
+            System.out.print(list[i] + "t");
         }
         System.out.println();
     }
@@ -66,10 +66,10 @@ public class HeapSort {
  
         // 调用快速排序方法
         HeapSort heap = new HeapSort();
-        System.out.print("排序前:\t");
+        System.out.print("排序前:t");
         heap.printPart(array, 0, array.length - 1);
         heap.heapSort(array);
-        System.out.print("排序后:\t");
+        System.out.print("排序后:t");
         heap.printPart(array, 0, array.length - 1);
     }
 }

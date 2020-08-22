@@ -2,6 +2,7 @@ package com.namaste.array;
 
 import com.namaste.common.Common;
 
+//leetcode88
 public class MergeTwoSortedArray {
 	
 	public static int[] myAnswer(int[] a1,int[] a2) {
@@ -26,16 +27,19 @@ public class MergeTwoSortedArray {
         int count=m+n-1;
         --m;--n;
         while(m>=0&&n>=0) nums1[count--]=(nums1[m]>nums2[n])?nums1[m--]:nums2[n--];//nums1数组长度是固定的，count超出长度了
-        while(n>=0) nums1[count--]=nums2[n--];
+        while(n>=0) nums1[count--]=nums2[n--];//处理如果数组2还有剩余元素的情况
         return nums1;
 	}
 	
 	public static void main(String[] args) {
-		int[] a1=new int[] {1,3,5,7,9};
-		int[] a2=new int[] {2,6,8};
+		int[] a1={1,3,5,7,9,0,0,0};
+		int[] a2={2,6,8};
 		int[] res1=myAnswer(a1,a2);
-		int[] res2=mergeSortedArray(a1,a1.length,a2,a2.length);
-		Common.Print(res1);
+		int[] res2=mergeSortedArray(a1,a1.length-a2.length,a2,a2.length);
+		//Common.Print(res1);
 		Common.Print(res2);
 	}
 }
+
+
+

@@ -1,10 +1,12 @@
 package com.namaste.string;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.namaste.common.Common;
 
-public class Dereplication {
-	public static void dereplication(String array) {
+import java.util.*;
+
+public class Deduplication {
+	//常规方法
+	public static void Solution1(String array) {
 		List<Character> result = new ArrayList<>();
 		for(int i=0;i<array.length();i++){
 			boolean flag = false;
@@ -22,8 +24,17 @@ public class Dereplication {
 		System.out.println(result);
 	}
 
+	public static void Solution2(String array){
+		int n=array.length();
+		Map<Character,Integer> map=new HashMap<>();
+		for(int i=0,j=0;j<n;j++){
+			map.put(array.charAt(j),j+1);
+		}
+		Common.MapToString(map);
+	}
+
     public static void main(String[] args) {
     	String array="bbccdeeea";
-		dereplication(array);
+		Solution2(array);
     }
 }
