@@ -6,8 +6,8 @@ public class MergeSort {
 	public static void main(String[] args) 
 	{
 		int[] arr=new int[] {3,2,1,7,8,5,3};
-		int[] temp=new int[7];
-		merge_sort(arr,0,6,temp);
+		int[] temp=new int[arr.length];
+		merge_sort(arr,0,arr.length-1,temp);
 		Common.Print(arr);
 	}
 	
@@ -29,25 +29,17 @@ public class MergeSort {
 		int k=0;
 		while(i<=m&&j<=n) {
 			if(a[i]<a[j]) {
-				temp[k]=a[i];
-				i++;
-				k++;
+				temp[k++]=a[i++];
 			}
 			else {
-				temp[k]=a[j];
-				j++;
-				k++;
+				temp[k++]=a[j++];
 			}
 		}
 		while(i<=m) {
-			temp[k]=a[i];
-			i++;
-			k++;
+			temp[k++]=a[i++];
 		}
 		while(j<=n) {
-			temp[k]=a[j];
-			j++;
-			k++;
+			temp[k++]=a[j++];
 		}
 		for(int ii=0;ii<k;ii++) {
 			a[first+ii]=temp[ii];

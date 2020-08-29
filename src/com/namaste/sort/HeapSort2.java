@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class HeapSort2 {
     public static void main(String []args){
-        int []arr = {10,5,8,3,4,6,7,1,2};
+        int []arr = {1, 2, 3, 4, 5, 6, 7, 8, 10};
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
