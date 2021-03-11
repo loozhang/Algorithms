@@ -3,7 +3,7 @@ package com.namaste.sort;
 public class BubbleSort {
     public static void main(String[] args)
     {
-        int[] arr=new int[] {3,2,1,7,8,5,3};
+        int[] arr={3,2,1,7,8,5,3};
         BubbleSortAscEnd(arr);
         BubbleSortAscStart(arr);
         BubbleSortDescEnd(arr);
