@@ -11,9 +11,7 @@ public class QuickSort {
 	}
 	
 	public static int[] quickSort(int[] arr,int l,int r) {
-		if(l>=r) {
-		}
-		else {
+		if(l<r){
 			int i=l;int j=r;int key=arr[l];
 			while(i<j) {
 				while(i<j&&arr[j]>=key)
@@ -29,7 +27,6 @@ public class QuickSort {
 			quickSort(arr,l,i-1);
 			quickSort(arr,i+1,r);
 		}
-		
 		return arr;
 	}
 }

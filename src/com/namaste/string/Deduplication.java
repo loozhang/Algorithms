@@ -24,11 +24,13 @@ public class Deduplication {
 		System.out.println(result);
 	}
 
+	/*
+	HashMap 方法
+	 */
 	public static void Solution2(String array){
-		int n=array.length();
 		Map<Character,Integer> map=new HashMap<>();
-		for(int i=0,j=0;j<n;j++){
-			map.put(array.charAt(j),j+1);
+		for(int i=0;i<array.length();i++){
+			map.put(array.charAt(i),1);
 		}
 		Common.MapToString(map);
 	}
