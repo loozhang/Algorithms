@@ -6,7 +6,7 @@ public class QuickSort {
 	public static void main(String[] args) 
 	{
 		int[] arr=new int[] {3,2,1,7,8,5,3};
-		Common.Print(quickSort(arr,0,arr.length-1));
+		Common.PrintArray(quickSort(arr,0,arr.length-1));
 		
 	}
 	

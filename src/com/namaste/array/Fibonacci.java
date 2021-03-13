@@ -9,7 +9,7 @@ public class Fibonacci {
         for(int i=0;i<n;i++){
             arr[i]=func(i);
         }
-        Common.Print(arr);
+        Common.PrintArray(arr);
     }
 
     public static int func(int n){

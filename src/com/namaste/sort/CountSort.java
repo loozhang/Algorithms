@@ -6,7 +6,7 @@ public class CountSort {
     public static void main(String[] args)
     {
         int[] arr={101,109,107,103,108,102,103,110,107,103};
-        Common.Print(countSort(arr));
+        Common.PrintArray(countSort(arr));
     }
 
     public static int[] countSort(int[] arr){

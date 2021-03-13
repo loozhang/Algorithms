@@ -32,6 +32,6 @@ public class ShellSort {
     			break;
     		}
     	}
-    	Common.Print(arr);
+    	Common.PrintArray(arr);
     }
 }

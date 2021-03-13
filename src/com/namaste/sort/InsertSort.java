@@ -28,6 +28,6 @@ public class InsertSort {
 				}
 			}
 		}
-		Common.Print(arr);
+		Common.PrintArray(arr);
 	}
 }

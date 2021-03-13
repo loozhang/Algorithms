@@ -29,6 +29,6 @@ public class SelectSort {
 				arr[i]=temp;				
 			}
 		}
-		Common.Print(arr);
+		Common.PrintArray(arr);
 	}
 }

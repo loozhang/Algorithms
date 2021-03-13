@@ -8,7 +8,7 @@ public class MergeSort {
 		int[] arr=new int[] {3,2,1,7,8,5,3};
 		int[] temp=new int[arr.length];
 		merge_sort(arr,0,arr.length-1,temp);
-		Common.Print(arr);
+		Common.PrintArray(arr);
 	}
 	
 	public static void merge_sort(int[] a,int first,int last,int[] temp) {

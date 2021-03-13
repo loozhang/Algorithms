@@ -3,7 +3,7 @@ package com.namaste.common;
 import java.util.*;
 
 public class Common {
-	public static void Print(int[] arr)
+	public static void PrintArray(int[] arr)
 	{
 		for(int i=0;i<arr.length;i++)
 		{

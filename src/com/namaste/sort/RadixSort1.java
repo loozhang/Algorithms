@@ -8,7 +8,7 @@ public class RadixSort1 {
 
     public static void main(String args[]){
         int[] arr={53, 3, 542, 748, 14, 214, 154, 63, 616};
-        Common.Print(sort(arr));
+        Common.PrintArray(sort(arr));
     }
 
     public static int[] sort(int[] sourceArray) {

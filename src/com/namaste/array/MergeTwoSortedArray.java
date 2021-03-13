@@ -37,7 +37,7 @@ public class MergeTwoSortedArray {
 		int[] res1=myAnswer(a1,a2);
 		int[] res2=mergeSortedArray(a1,a1.length-a2.length,a2,a2.length);
 		//Common.Print(res1);
-		Common.Print(res2);
+		Common.PrintArray(res2);
 	}
 }
 

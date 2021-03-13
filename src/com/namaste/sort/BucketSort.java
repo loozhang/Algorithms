@@ -8,7 +8,7 @@ public class BucketSort {
     public static void main(String[] args)
     {
         int[] arr={101,109,107,103,108,102,103,110,107,103};
-        Common.Print(bucketSort(arr,3));
+        Common.PrintArray(bucketSort(arr,3));
     }
 
     public static int[] bucketSort(int[] arr,int bucketSize){
