@@ -6,6 +6,9 @@ import java.util.Map.Entry;
 
 public class FirstUniqueChar {
 
+	/*
+	使用LinkedHashMap，因为它是有序的，可以实现“第一个”的逻辑
+	 */
 	public static String firstUniqueChar(String s) {
 		String ans=null;
 		Map<Character,Integer> map=new LinkedHashMap<>();

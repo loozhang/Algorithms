@@ -1,4 +1,4 @@
-package com.namaste.reverse;
+package com.namaste.convert;
 
 public class IntToArray {
     public static int[] reverse(int n){

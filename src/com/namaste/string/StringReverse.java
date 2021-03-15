@@ -1,67 +1,105 @@
 package com.namaste.string;
 
+import java.util.Stack;
+
 public class StringReverse {
 
-    public static int reverse(int x) {
-        int a;
-        int b=x;
-        int c=0;
+    //利用StringBuffer的内置reverse方法进行逆序排序
 
-        while(b!=0){
-            if(Math.abs(c)>Integer.MAX_VALUE/10) return 0;
-            a=b%10;
-            b=b/10;
-            c=c*10+a;
-        }
+    public static String reverse1(String str) {
 
-        return c;
+        return new StringBuffer(str).reverse().toString();
+
     }
 
-    public static boolean isPalindrome(int x) {
-        int res=0;
-        while(x!=0){
-            if(Math.abs(res)>Integer.MAX_VALUE/10) return false;
-            res=res*10+x%10;
-            x/=10;
+
+
+    //从头部开始,正序:通过字符串数组实现从尾部开始顺序逐个接入字符串reverse
+    /*
+    使用charAt()方法
+     */
+    public static String reverse2(String str) {
+
+        String reverse = "";
+
+        for (int i = 0; i < str.length(); i++) {
+
+            reverse = str.charAt(i) + reverse;
+
         }
-        if(res==x){
-            return true;
-        }
-        else{
-            return false;
-        }
+
+        return reverse;
+
     }
 
-    public static int romanToInt(String s) {
-        int res=0;
-        int cur=0;
-        int pre=0;
-        char[] chars=s.toCharArray();
-        for (int i=chars.length-1;i>=0;i--) {
-            switch(chars[i]){
-                case 'I': cur=1;break;
-                case 'V': cur=5;break;
-                case 'X': cur=10;break;
-                case 'L': cur=50;break;
-                case 'C': cur=100;break;
-                case 'D': cur=500;break;
-                case 'M': cur=1000;
-            }
 
-            if(cur>=pre){
-                res=res+cur;
-            }
-            else{
-                res=res-cur;
-            }
-            pre=cur;
+
+    //从尾部开始,倒序
+    /*
+    使用toCharArray()方法
+     */
+    public static String reverse3(String str) {
+
+        char[] arr = str.toCharArray();//String 转换成char数组
+
+        String reverse = "";
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+
+            reverse += arr[i];
+
         }
-        return res;
+
+        return reverse;
+
+    }
+
+
+
+    //利用栈:First In Last Out
+
+    public static String reverse4(String str) {
+
+        StringBuffer sb = new StringBuffer();
+
+        Stack<Character> s = new Stack<Character>();//创建只装字符型的stack
+
+        for (int i = 0; i < str.length(); i++) {
+
+            s.add(str.charAt(i));
+
+        }
+
+        for (int i = 0; i < str.length(); i++) {
+
+            sb.append(s.pop());//出栈，StringBuffer.append()添加到sb的缓冲区末端；.insert(int index,添加的内容)添加到指定位置
+
+        }
+
+        return sb.toString();
+
+    }
+
+
+
+    //递归
+
+    public static String reverse5(String str){
+
+        int len=str.length();
+
+        if(len<=1)return str;
+
+        String left=str.substring(0,len/2);
+
+        String right=str.substring(len/2,len);
+
+        return reverse5(left)+reverse5(right);
+
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("IV"));
-
+        System.out.println(reverse2("abc"));
     }
 
 }
