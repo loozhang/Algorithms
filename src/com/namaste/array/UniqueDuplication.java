@@ -4,11 +4,22 @@ package com.namaste.array;
 public class UniqueDuplication {
 
     public static void main(String[] args){
-        int[] a=new int[]{1,2,3,4,5,6,7,8,9,10,7};
-        System.out.println(uniqueDuplication(a));
+        int[] a=new int[]{1,2,3,4,5,6,7,7,8,9,10};
+        System.out.println(uniqueDuplication1(a));
     }
 
-    public static int uniqueDuplication(int[] nums){
+    //累加和法
+    public static int uniqueDuplication1(int[] nums){
+        int i,res=0,len=nums.length;
+        for(i=0;i<len-1;i++){
+            res+=nums[i]-(i+1);
+        }
+        res+=nums[len-1];
+        return res;
+    }
+
+    //异或法
+    public static int uniqueDuplication2(int[] nums){
         int i,x1=0,x2=0,len=nums.length;
         for(i=0;i<len;i++)//数组所有元素 异或
         {
