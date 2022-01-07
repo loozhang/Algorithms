@@ -12,6 +12,7 @@ public class Fibonacci {
         Common.PrintArray(arr);
     }
 
+
     public static int func(int n){
         if(n<2) return 1;
         return func(n-2)+func(n-1);
